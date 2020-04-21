@@ -10,9 +10,11 @@
     </h1>
     
     <div id="app" @click="paste">
-      <ul v-for="(x,i) in items">
-	<li>{{i}} : {{x}}</li>
-      </ul>
+      <table border>
+	<tr v-for="row in items">
+	  <td v-for="c in row"> {{c}} </td>
+	</tr>
+      </table>
     </div>
 
     <script src="test.js"></script>

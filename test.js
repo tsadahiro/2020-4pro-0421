@@ -2,7 +2,7 @@ var app = new Vue({
     el: '#app',
     data: {
 	message: 'Hello Sadahiro',
-	items: [],
+	items: [[],[],[]],
     },
     methods:{
 	paste(){
@@ -10,8 +10,11 @@ var app = new Vue({
 	}
     },
     mounted(){ //ロードされたときに呼び出される
-	for (i=1; i<=100; i++){
-	    this.items.push(i); // 配列itemsにiを追加
+	for (i=0; i<10; i++){
+	    this.items.push([]);
+	    for (j=0; j<10; j++){
+		this.items[i].push();
+	    }
 	}
     }
 })
